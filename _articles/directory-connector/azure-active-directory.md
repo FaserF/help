@@ -177,3 +177,32 @@ Once [Sync Options](#configure-sync-options) and [Filters](#specify-sync-filters
 Directory Connector will begin polling your directory based on the configured [Sync Options](#configure-sync-options) and [Filters](#specify-sync-filters).
 
 If you exit or close the application, automatic sync will stop. To keep Directory Connector running in the background, minimize the application or hide it to the system tray.
+
+## CLI data.json Parameter
+
+The following parameters need to be changed from the [data.json](https://bitwarden.com/help/article/directory-sync-shared/){:target="\_blank"} template to integrate the Azure AD Connector:
+
+apikey_clientId
+entityId
+entityType
+apikey_clientSecret
+organizationId
+directoryType
+directoryConfig_1
+   key
+   tenant
+   applicationId
+syncConfig
+   users
+   groups
+   interval
+   removeDisabled
+   overwriteExisting
+   largeImport
+   userFilter
+   groupFilter
+
+Other options can be changed, but not all of them are necessary for an Azure AD Sync.
+
+"directoryType": 1
+stands for Azure Active Directory. This means that only the directoryConfig_1 is loaded.
