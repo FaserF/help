@@ -180,7 +180,7 @@ If you exit or close the application, automatic sync will stop. To keep Director
 
 ## CLI data.json Parameter
 
-The following parameters need to be changed from the [data.json](https://bitwarden.com/help/article/directory-sync-shared/){:target="\_blank"} template to integrate the Azure AD Connector:
+The following parameters need to be changed from the [data.json](https://bitwarden.com/help/article/directory-sync-shared/) template to integrate the Azure AD Connector:
 
 - apikey_clientId
 - entityId
